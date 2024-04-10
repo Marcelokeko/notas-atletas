@@ -1,3 +1,5 @@
+// Função que vai receber o nome e as notas dos Atletas.
+
 function dadosAtletas() {
     let atletas = [
         {
@@ -20,6 +22,9 @@ function dadosAtletas() {
     return atletas;
 }
 
+// Função que busca as notas dos atletas na função dadosAtletas() 
+// e retorna elas em ordem crescente.
+
 function notasOrdemCrescente(atletas) {
     let notasOrdenadas = [];
     for (const atleta of atletas) {
@@ -28,6 +33,9 @@ function notasOrdemCrescente(atletas) {
     return notasOrdenadas;
 }
 
+// Função que vai buscar as notas ordenadas na função notasOrdemCrescente()
+// e vai retornar sem a menor e a maior nota.
+
 function removeMaiorMenorNota(notasOrdenadas) {
     let notasValidas = [];
     for (const notas of notasOrdenadas) {
@@ -35,6 +43,9 @@ function removeMaiorMenorNota(notasOrdenadas) {
     }
     return notasValidas;
 }
+
+// Função que busca as notas validas na função removeMaiorMenorNota()
+// e retorna a media de cada Atleta.
 
 function mediaNotasValidas(notasValidas) {
     let medias = [];
@@ -45,13 +56,19 @@ function mediaNotasValidas(notasValidas) {
     return medias;
 }
 
+// variaveis que recebem os valores das respectivas funções.
+
 let atletas = dadosAtletas();
 let notasOrdenadas = notasOrdemCrescente(atletas);
 let notasValidas = removeMaiorMenorNota(notasOrdenadas);
 let medias = mediaNotasValidas(notasValidas);
 
+// O laço for vai percorrer a variável atletas que está recebendo os valores da função dadosAtletas(),
+// e vai retornar os valores pedidos no console.
+
 for (let i = 0; i < atletas.length; i++) {
     console.log(`Atleta: ${atletas[i].nome}`);
     console.log(`Notas Obtidas: ${atletas[i].notas.join(', ')}`);
-    console.log(`Média Válida: ${medias[i].toFixed(2)}\n`);
+    console.log(`Média Válida: ${medias[i]}`);
+    console.log("============================");
 }
