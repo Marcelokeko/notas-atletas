@@ -7,4 +7,4 @@ Projeto realizado para fazer o cálculo da media das notas validas dadas pelos j
 - JavaScript
 
 ## Atualização :
-Próxima atualização será criar uma função para a adicionar mais atletas e notas.
+Em breve, será criada uma função para adicionar mais atletas e notas.
