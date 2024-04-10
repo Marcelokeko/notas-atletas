@@ -5,3 +5,6 @@ Projeto realizado para fazer o cálculo da media das notas validas dadas pelos j
 
 ## Tecnologia usada :
 - JavaScript
+
+## Atualização :
+Próxima atualização será criar uma função para a adicionar mais atletas e notas.
