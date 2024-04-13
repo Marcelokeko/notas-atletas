@@ -51,9 +51,9 @@ function mediaNotasValidas(notasValidas) {
     let medias = [];
     for (const notas of notasValidas) {
         let media = notas.reduce((atl, nota) => atl + nota, 0) / notas.length;
-        medias.push(media);
+        medias.push(media.toFixed(2));
     }
-    return medias;
+    return medias
 }
 
 // variaveis que recebem os valores das respectivas funções.
