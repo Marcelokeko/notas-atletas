@@ -21,13 +21,21 @@ function dadosAtletas() {
     ];
     return atletas;
 }
+// Notas recebidas 
+function notasRecebidas(atletas) {
+    let notasDadas = [];
+    for (const atleta of atletas) {
+        notasDadas.push(atleta.notas);
+    }
+    return notasDadas;
+}
 
-// Função que busca as notas dos atletas na função dadosAtletas() 
+// Função que busca as notas dos atletas na função dadosAtletas()
 // e retorna elas em ordem crescente.
 
-function notasOrdemCrescente(atletas) {
+function notasOrdemCrescente(notasDadas) {
     let notasOrdenadas = [];
-    for (const atleta of atletas) {
+    for (const atleta of notasDadas) {
         notasOrdenadas.push(atleta.notas.sort((a, b) => a - b));
     }
     return notasOrdenadas;
@@ -71,4 +79,5 @@ for (let i = 0; i < atletas.length; i++) {
     console.log(`Notas Obtidas: ${atletas[i].notas.join(', ')}`);
     console.log(`Média Válida: ${medias[i]}`);
     console.log("============================");
+
 }
